@@ -1,0 +1,18 @@
+{
+      "name": "WRA Extensions",
+      "description": "Extensões com varias funcionalidades e pacotes para realizar modificações no Bitrix WRA.",
+      "version": "1.0",
+      "manifest_version": 3,
+      "permissions": [
+            "activeTab",
+            "scripting",
+            "storage"
+      ],
+      "host_permissions": [
+            "http://*/*",
+            "https://*/*"
+      ],
+      "background": {
+            "service_worker": "index.js"
+      }
+}

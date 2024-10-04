@@ -1,0 +1,173 @@
+.whatsapp-color,
+.facebook-color,
+.instagram-color,
+.landing-page-color,
+.email-color,
+.youtube-color,
+.site-color,
+.twenty-five-percent,
+.fifty-percent,
+.seventy-five-percent,
+.ninety-percent,
+.one-hundred-percent,
+.due-this-week,
+.due-today,
+.overdue {
+      display: inline-block;
+      overflow: hidden;
+      max-width: 100%;
+      box-sizing: border-box;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      margin-bottom: 0;
+      margin-right: 4px;
+      padding: 8px 12px 8px 12px;
+      border-radius: 5px;
+
+      text-transform: uppercase;
+      transition: 250ms all ease;
+      font: 10px / 20px var(--ui-font-family-primary, var(--ui-font-family-helvetica));
+      font-weight: var(--ui-font-weight-bold);
+      line-height: 11px;
+      margin-right: 5px;
+      margin-bottom: 5px;
+      margin-top: 0;
+}
+
+.whatsapp-color {
+      background-color: #50E15F;
+      color: white;
+}
+
+.facebook-color {
+      background-color: blue;
+      color: white;
+}
+
+.instagram-color {
+      background-color: purple;
+      color: white;
+}
+
+.landing-page-color {
+      background-color: orange;
+      color: white;
+}
+
+.email-color {
+      background-color: yellow;
+      color: black;
+}
+
+.youtube-color {
+      background-color: red;
+      color: white;
+}
+
+.site-color {
+      background-color: brown;
+      color: white;
+}
+
+.personal-lead {
+      background-color: rgb(92, 91, 91);
+      color: white;
+}
+
+.offer-free {
+      background-color: #216E4E;
+      color: white;
+}
+
+.listing-lease {
+      background-color: #805F02;
+      color: white;
+}
+
+.vacant-land {
+      background-color: #FFA362;
+      color: white;
+}
+
+.in-hold {
+      background-color: #AD2F21;
+      color: white;
+}
+
+.new-construction {
+      background-color: #5E4DB3;
+      color: white;
+}
+
+.representing-seller {
+      background-color: #206A83;
+      color: white;
+}
+
+.pendencias {
+      background-color: #4C6B1F;
+      color: white;
+}
+
+.representing-buyer {
+      background-color: #943D72;
+      color: white;
+}
+
+/* Classes do business temperature */
+.twenty-five-percent {
+      background-color: white;
+      color: black;
+}
+
+/* 25% Branco */
+
+.fifty-percent {
+      background-color: #626566;
+      color: white;
+}
+
+.seventy-five-percent {
+      background-color: #F27F1B;
+      color: white;
+}
+
+.ninety-percent {
+      background-color: #065903;
+      color: white;
+}
+
+.one-hundred-percent {
+      background-color: #020873;
+      color: white;
+}
+
+.due-this-week {
+      background-color: #3C454D;
+      color: white;
+}
+
+.due-today {
+      background: #385934;
+      color: white;
+}
+
+.overdue {
+      /* Card todo vermelho */
+      background: #CB5449;
+      color: white;
+}
+
+.new-empty {
+      background: #025940;
+      /* verde escur */
+      color: white;
+      border: 1px solid white;
+}
+
+.moveout {
+      background: #dd4a3d;
+      /* Vermelho */
+      color: white;
+      border: 1px solid white;
+}
