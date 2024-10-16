@@ -1,10 +1,39 @@
-// Função para substituir as tags por estilos
 const replaceTags = () => {
-    // Seleciona todos os elementos com a classe 'crm-kanban-item-fields-item'
+    const columns = document.querySelectorAll('.main-kanban-column');
+
+    columns.forEach(column => {
+        const titleElement = column.querySelector('.main-kanban-column-title-text-inner');
+        const titleText = titleElement ? titleElement.textContent.trim().toLowerCase() : '';
+
+        let isHOAColumn = (titleText === 'hoa');
+        let isOtherColumn = ['repairs', 'warranty', 'grama', 'limpeza piscina', 'piscina', 'inventário', 'grama/piscina', 'repairs/to do\'s'].includes(titleText);
+
+        const cards = column.querySelectorAll('.crm-kanban-item');
+
+        cards.forEach(card => {
+            const tagItems = card.querySelectorAll('.crm-kanban-item-fields-item-value');
+
+            let containsHOA = false;
+
+            tagItems.forEach(tag => {
+                if (tag.textContent.includes('HOA')) {
+                    containsHOA = true;
+                }
+            });
+
+            if (containsHOA) {
+                if (isHOAColumn) {
+                    card.classList.add('hoa-background');
+                } else if (isOtherColumn) {
+                    card.classList.add('specific-background');
+                }
+            }
+        });
+    });
+
     const items = document.querySelectorAll('.crm-kanban-item-fields-item');
 
     const colors = {
-        // Classes do lead
         'WhatsApp': 'whatsapp-color',
         'Facebook': 'facebook-color',
         'Instagram': 'instagram-color',
@@ -22,22 +51,20 @@ const replaceTags = () => {
         'Pendências': 'pendencias',
         'Representing Buyer': 'representing-buyer',
 
-        // Classes do business temperature
-        '25%': 'twenty-five-percent', // 25% Branco
-        '50%': 'fifty-percent', // 50% Cinza escuro
-        '75%': 'seventy-five-percent', // 75% laranja
-        '90%': 'ninety-percent',// 90% verde escuro
-        '100%': 'one-hundred-percent',// 100% azul escuro
-        // Classes dos status
-        'Due this week': 'due-this-week', // Cinza escuro
-        'Due today': 'due-today', // Verde escuro
-        'Overdue': 'overdue', // Todo o card em vermelho claro
+        '25%': 'twenty-five-percent',
+        '50%': 'fifty-percent',
+        '75%': 'seventy-five-percent',
+        '90%': 'ninety-percent',
+        '100%': 'one-hundred-percent',
+
+        'Due this week': 'due-this-week',
+        'Due today': 'due-today', 
+        'Overdue': 'overdue', 
         'Nova/vazia': 'new-empty',
         'Moveout': 'moveout',
     };
 
     items.forEach(item => {
-        // Verifica se o título do item contém "Lead", "Status" ou "Business temperature"
         const title = item.querySelector('.crm-kanban-item-fields-item-title-text');
         if (title && (title.textContent.trim() === 'Lead' || title.textContent.trim() === 'Status' || title.textContent.trim() === 'Business temperature' || title.textContent.trim() === 'Status PM')) {
             const tag = item.querySelector('.crm-kanban-item-fields-item-value');
@@ -50,14 +77,13 @@ const replaceTags = () => {
             tag.innerHTML = '';
 
             words.forEach(word => {
-                if (colors[word]) {  // Adiciona apenas se a cor estiver definida
+                if (colors[word]) { 
                     const span = document.createElement('span');
                     span.textContent = word;
-                    span.className = `${colors[word]} tags-color`; // Apenas as classes correspondentes
+                    span.className = `${colors[word]} tags-color`;
 
                     tag.appendChild(span);
 
-                    // Adiciona o fundo vermelho à classe '.crm-kanban-item' se for 'Overdue'
                     if (word === 'Overdue') {
                         const card = item.closest('.crm-kanban-item');
                         if (card) {
@@ -77,11 +103,9 @@ const replaceTags = () => {
     });
 };
 
-// Variável de controle para o observador e execução
 let observer = null;
 let executedOnce = false;
 
-// Função para iniciar o observador
 const startObserver = () => {
     if (observer) {
         observer.disconnect();
@@ -90,36 +114,17 @@ const startObserver = () => {
     observer = new MutationObserver((mutationsList, observerInstance) => {
         const items = document.querySelectorAll('.crm-kanban-item-fields-item');
 
-        // Se encontrar os elementos e ainda não tiver executado
         if (items.length > 0 && !executedOnce) {
             executedOnce = true;
 
-            // Aguarda um pequeno atraso antes de executar para evitar sobrecarga
             setTimeout(() => {
                 replaceTags();
-                executedOnce = false; // Permite que a função seja executada novamente em futuras mudanças
-            }, 1); // Tempo de delay em milissegundos
+                executedOnce = false;
+            }, 500);
         }
     });
 
-    // Inicia o observador de mutações
     observer.observe(document.body, { childList: true, subtree: true });
 };
 
-// Função para monitorar mudanças na URL e reiniciar o observador
-const monitorURLChanges = () => {
-    let lastUrl = window.location.href;
-
-    new MutationObserver(() => {
-        const currentUrl = window.location.href;
-        if (currentUrl !== lastUrl) {
-            lastUrl = currentUrl;
-            // Reinicia o observador quando a URL mudar
-            startObserver();
-        }
-    }).observe(document.body, { childList: true, subtree: true });
-};
-
-// Chama a função para iniciar o observador e monitorar a URL
 startObserver();
-monitorURLChanges();

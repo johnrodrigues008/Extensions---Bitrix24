@@ -145,13 +145,23 @@
 }
 
 .new-empty {
-      background: #025940; /* verde escur */
+      background: #025940;
+      /* verde escur */
       color: white;
       border: 1px solid white;
 }
 
 .moveout {
-      background: #dd4a3d; /* Vermelho */
+      background: #dd4a3d;
+      /* Vermelho */
       color: white;
       border: 1px solid white;
+}
+
+.hoa-background {
+      background-color: #47e4c2!important;
+}
+
+.specific-background {
+      background-color: #ffa801!important;
 }
