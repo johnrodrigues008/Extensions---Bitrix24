@@ -171,3 +171,22 @@
       color: white;
       border: 1px solid white;
 }
+
+/* Marketing */
+.moveout-color { background-color: #46888F; color: #FFFFFF; }
+.waiting-response-color { background-color: #2C9282; color: #FFFFFF; }
+.done-color { background-color: #21645A; color: #FFFFFF; }
+.in-progress-color { background-color: #CCC0B2; color: #000000; }
+.order-print-color { background-color: #DEC67F; color: #000000; }
+.waiting-photo-color { background-color: #BB9586; color: #000000; }
+.creating-art-color { background-color: #CD96AC; color: #000000; }
+.on-demand-color { background-color: #CB9AAB; color: #000000; }
+.not-started-color { background-color: #A65D66; color: #FFFFFF; }
+.stand-by-color { background-color: #A96B77; color: #FFFFFF; }
+.waiting-approval-color { background-color: #698B8D; color: #FFFFFF; }
+.update-color { background-color: #3A727B; color: #FFFFFF; }
+.order-placed-color { background-color: #78965A; color: #FFFFFF; }
+.in-briefing-color { background-color: #A6BA7F; color: #000000; }
+.in-analysis-color { background-color: #845F92; color: #FFFFFF; }
+.content-production-color { background-color: #9F83A9; color: #FFFFFF; }
+.fixed-task-color { background-color: #B2B4A9; color: #000000; }

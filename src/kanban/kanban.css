@@ -5,163 +5,62 @@
       box-sizing: border-box;
       white-space: nowrap;
       text-overflow: ellipsis;
-      margin-bottom: 0;
-      margin-right: 4px;
-      padding: 8px 12px 8px 12px;
+      margin: 0 4px 5px 0;
+      padding: 8px 12px;
       border-radius: 5px;
-      /* ------------------------------------------------------- */
       text-transform: uppercase;
       transition: 250ms all ease;
       font: 10px / 20px var(--ui-font-family-primary, var(--ui-font-family-helvetica));
       font-weight: var(--ui-font-weight-bold);
       line-height: 11px;
-      margin-right: 5px;
-      margin-bottom: 5px;
-      margin-top: 0;
 }
 
-.whatsapp-color {
-      background-color: #50E15F;
-      color: white;
-}
+/* Cores específicas para cada estado */
+.whatsapp-color { background-color: #50E15F; color: white; }
+.facebook-color { background-color: blue; color: white; }
+.instagram-color { background-color: purple; color: white; }
+.landing-page-color { background-color: orange; color: white; }
+.email-color { background-color: yellow; color: black; }
+.youtube-color { background-color: red; color: white; }
+.site-color { background-color: brown; color: white; }
+.personal-lead { background-color: rgb(92, 91, 91); color: white; }
+.offer-free { background-color: #216E4E; color: white; }
+.listing-lease { background-color: #805F02; color: white; }
+.vacant-land { background-color: #FFA362; color: white; }
+.in-hold { background-color: #AD2F21; color: white; }
+.new-construction { background-color: #5E4DB3; color: white; }
+.representing-seller { background-color: #206A83; color: white; }
+.pendencias { background-color: #4C6B1F; color: white; }
+.representing-buyer { background-color: #943D72; color: white; }
 
-.facebook-color {
-      background-color: blue;
-      color: white;
-}
+.twenty-five-percent { background-color: rgba(255, 255, 255, 0.692); color: black; border: 1px solid rgba(0, 0, 0, 0.384); }
+.fifty-percent { background-color: #626566; color: white; }
+.seventy-five-percent { background-color: #F27F1B; color: white; }
+.ninety-percent { background-color: #065903; color: white; }
+.one-hundred-percent { background-color: #020873; color: white; }
+.due-this-week { background-color: #3C454D; color: white; }
+.due-today { background-color: #385934; color: white; }
+.overdue { background: #CB5449; color: white; border: 1px solid white; }
+.new-empty { background: #025940; color: white; border: 1px solid white; }
+.moveout { background: #dd4a3d; color: white; border: 1px solid white; }
+.hoa-background { background-color: #47e4c2!important; }
+.specific-background { background-color: #ffa801!important; }
 
-.instagram-color {
-      background-color: purple;
-      color: white;
-}
-
-.landing-page-color {
-      background-color: orange;
-      color: white;
-}
-
-.email-color {
-      background-color: yellow;
-      color: black;
-}
-
-.youtube-color {
-      background-color: red;
-      color: white;
-}
-
-.site-color {
-      background-color: brown;
-      color: white;
-}
-
-.personal-lead {
-      background-color: rgb(92, 91, 91);
-      color: white;
-}
-
-.offer-free {
-      background-color: #216E4E;
-      color: white;
-}
-
-.listing-lease {
-      background-color: #805F02;
-      color: white;
-}
-
-.vacant-land {
-      background-color: #FFA362;
-      color: white;
-}
-
-.in-hold {
-      background-color: #AD2F21;
-      color: white;
-}
-
-.new-construction {
-      background-color: #5E4DB3;
-      color: white;
-}
-
-.representing-seller {
-      background-color: #206A83;
-      color: white;
-}
-
-.pendencias {
-      background-color: #4C6B1F;
-      color: white;
-}
-
-.representing-buyer {
-      background-color: #943D72;
-      color: white;
-}
-
-/* Classes do business temperature */
-.twenty-five-percent {
-      background-color: rgba(255, 255, 255, 0.692);
-      color: black;
-      border: 1px solid rgba(0, 0, 0, 0.384);
-}
-
-.fifty-percent {
-      background-color: #626566;
-      color: white;
-}
-
-.seventy-five-percent {
-      background-color: #F27F1B;
-      color: white;
-}
-
-.ninety-percent {
-      background-color: #065903;
-      color: white;
-}
-
-.one-hundred-percent {
-      background-color: #020873;
-      color: white;
-}
-
-.due-this-week {
-      background-color: #3C454D;
-      color: white;
-}
-
-.due-today {
-      background: #385934;
-      color: white;
-}
-
-.overdue {
-      /* Card todo vermelho */
-      background: #CB5449;
-      color: white;
-      border: 1px solid white;
-}
-
-.new-empty {
-      background: #025940;
-      /* verde escur */
-      color: white;
-      border: 1px solid white;
-}
-
-.moveout {
-      background: #dd4a3d;
-      /* Vermelho */
-      color: white;
-      border: 1px solid white;
-}
-
-.hoa-background {
-      background-color: #47e4c2!important;
-}
-
-.specific-background {
-      background-color: #ffa801!important;
-}
+/* Marketing */
+.moveout-color { background-color: #46888F; color: #FFFFFF; }
+.waiting-response-color { background-color: #2C9282; color: #FFFFFF; }
+.done-color { background-color: #21645A; color: #FFFFFF; }
+.in-progress-color { background-color: #CCC0B2; color: #000000; }
+.order-print-color { background-color: #DEC67F; color: #000000; }
+.waiting-photo-color { background-color: #BB9586; color: #000000; }
+.creating-art-color { background-color: #CD96AC; color: #000000; }
+.on-demand-color { background-color: #CB9AAB; color: #000000; }
+.not-started-color { background-color: #A65D66; color: #FFFFFF; }
+.stand-by-color { background-color: #A96B77; color: #FFFFFF; }
+.waiting-approval-color { background-color: #698B8D; color: #FFFFFF; }
+.update-color { background-color: #3A727B; color: #FFFFFF; }
+.order-placed-color { background-color: #78965A; color: #FFFFFF; }
+.in-briefing-color { background-color: #A6BA7F; color: #000000; }
+.in-analysis-color { background-color: #845F92; color: #FFFFFF; }
+.content-production-color { background-color: #9F83A9; color: #FFFFFF; }
+.fixed-task-color { background-color: #B2B4A9; color: #000000; }

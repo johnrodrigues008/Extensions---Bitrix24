@@ -62,11 +62,29 @@ const replaceTags = () => {
         'Overdue': 'overdue', 
         'Nova/vazia': 'new-empty',
         'Moveout': 'moveout',
+
+        'PRONTO PARA REVISÃO': 'moveout-color',
+        'ESPERANDO RESPOSTA': 'waiting-response-color',
+        'FEITO': 'done-color',
+        'EM ANDAMENTO': 'in-progress-color',
+        'FAZER PEDIDO NA GRÁFICA': 'order-print-color',
+        'ESPERANDO FOTO': 'waiting-photo-color',
+        'FAZENDO ARTE': 'creating-art-color',
+        'POR DEMANDA': 'on-demand-color',
+        'NAO INICIADO': 'not-started-color',
+        'STAND BY': 'stand-by-color',
+        'ESPERANDO APROVAÇÃO': 'waiting-approval-color',
+        'ATUALIZAR': 'update-color',
+        'PEDIDO EFETUADO': 'order-placed-color',
+        'EM BRIEFING': 'in-briefing-color',
+        'EM ANÁLISE': 'in-analysis-color',
+        'PRODUÇÃO DE CONTEÚDO': 'content-production-color',
+        'TAREFA FIXA': 'fixed-task-color',
     };
 
     items.forEach(item => {
         const title = item.querySelector('.crm-kanban-item-fields-item-title-text');
-        if (title && (title.textContent.trim() === 'Lead' || title.textContent.trim() === 'Status' || title.textContent.trim() === 'Business temperature' || title.textContent.trim() === 'Status PM')) {
+        if (title && (title.textContent.trim() === 'Lead' || title.textContent.trim() === 'Status' || title.textContent.trim() === 'Business temperature' || title.textContent.trim() === 'Status PM' || title.textContent.trim() === 'Etiquetas')) {
             const tag = item.querySelector('.crm-kanban-item-fields-item-value');
 
             if (!tag.dataset.originalContent) {
